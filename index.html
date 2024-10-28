@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引包 -->
+    <script src="./js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <title>Swiper的基本使用</title>
+</head>
+
+<body>
+    <div>
+        <p>Swiper的基本使用：
+            第一步：引入js｜css包
+            第二步：创建页面中的结构
+            第三步：new swiper实例
+        </p>
+    </div>
+    <hr>
+    <div class="swiper-container" style="width: 600px; height: 400px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">slide1</div>
+            <div class="swiper-slide">slide2</div>
+            <div class="swiper-slide">slide3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    // 创建swiper实例
+    var myswiper = new Swiper('.swiper-container', {
+        loop: true,
+        // 如果需要分页器
+        pagination: {
+            el: ".swiper-pagination"
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+</script>
